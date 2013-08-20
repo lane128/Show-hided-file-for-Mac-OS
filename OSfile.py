@@ -2,7 +2,7 @@ import argparse,os
 
 parser = argparse.ArgumentParser(description="Show system file for Mac OS by Lane128.",
 	formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('-v',"--version",action="version",version="%(prog)s v1.0",default=None)
+parser.add_argument('-v',"--version",action="version",version="%(prog)s v1.1",default=None)
 parser.add_argument("-s","--show",action="store_true",default=None,
 	help="show the unvisible file for Mac OS")
 parser.add_argument("-n","--notshow",action="store_true",default=None,
