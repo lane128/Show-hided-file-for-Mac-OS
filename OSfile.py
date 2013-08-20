@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+#-*-python-*-
 import argparse,os
 
 parser = argparse.ArgumentParser(description="Show system file for Mac OS by Lane128.",
