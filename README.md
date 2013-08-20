@@ -16,5 +16,7 @@ Usage
      $ python fileName.py -n    //hide the system files
      $ python fileName.py -v    //show the Version information
      
-
+Update
+========
+v1.1 fix the input without optional command would show the unamiable error prompt.
 
