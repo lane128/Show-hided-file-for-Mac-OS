@@ -12,7 +12,7 @@ Usage
 ==============
 
      $ python fileName.py -h    //for more help information
-     $ python fileName.py -y    //show all files
+     $ python fileName.py -s    //show all files
      $ python fileName.py -n    //hide the system files
      $ python fileName.py -v    //show the Version information
      
