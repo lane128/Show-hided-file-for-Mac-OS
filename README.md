@@ -24,8 +24,7 @@ than enjoy it!
      
 Update
 ========
--v1.1 fix the input without optional command would show the unamiable error prompt.
-========
+-v1.1 fix the input without optional command would show the unamiable error prompt.   
 -add the GUI version.
 
 
