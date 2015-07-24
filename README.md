@@ -11,12 +11,20 @@ Python >=2.7.4
 Usage
 ==============
 
-     $ python fileName.py -h    //for more help information
-     $ python fileName.py -s    //show all files
-     $ python fileName.py -n    //hide the system files
-     $ python fileName.py -v    //show the Version information
+     $ python OSfile.py -h    //for more help information
+     $ python OSfile.py -s    //show all files
+     $ python OSfile.py -n    //hide the system files
+     $ python OSfile.py -v    //show the Version information
+     
+GUI Version
+========
+     $ python OSfile_GUI
+     
+than enjoy it!
      
 Update
 ========
 v1.1 fix the input without optional command would show the unamiable error prompt.
+add the GUI version.
+
 
