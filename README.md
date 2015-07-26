@@ -18,7 +18,7 @@ Usage
      
 GUI Version
 ========
-     $ python OSfile_GUI
+     $ python OSfile_GUI.py
      
 than enjoy it!
      
