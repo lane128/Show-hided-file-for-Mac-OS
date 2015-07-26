@@ -1,53 +1,51 @@
-__author__ = 'lane'
+__author__ = 'lane128.top'
 
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from Tkinter import Tk, Frame, BOTH
-from ttk import Frame, Button, Style
+#!/usr/bin/python
+
+from Tkinter import *
+from tkMessageBox import *
 import os
 
+def showOpt():
+	os.system('defaults write com.apple.finder AppleShowAllFiles -bool true')
+	os.system('killall Finder')
+	showinfo('Show file','The system file are shown')
+	print "-->>The system file are shown."
 
-class Example(Frame):
-    __h = 300
-    __w = 384
+def hideOpt():
+	os.system('defaults write com.apple.finder AppleShowAllFiles -bool false')
+	os.system('killall Finder')
+	showinfo('Hide file','The system file are hided')
+	print "-->>The system file are hided."
 
-    def __init__(self, parent):
-        Frame.__init__(self, parent)
-        self.parent = parent
-        self.initUI()
+def quitOpt():
+	userRep=askyesno('Quit', 'Do you want to quit?')
+	if userRep:
+		print "-->>Your have quited the programme."
+		quit()
 
-    def initUI(self):
-        self.parent.title("Show/Hide the system file of Mac OS")
-        self.pack(fill=BOTH, expand=1)
-        buttonW=50
-        buttonH=8
-        self.parent.geometry('%dx%d+%d+%d' % (self.__w, self.__h, 100,100))
-        quitButton = Button(self, text="Quit",width=buttonW,command=self.quit)
-        quitButton.place(x=0,y=buttonH*6)
-        showButton=Button(self,text="Show the system file",width=buttonW,command=self.showInfo)
-        showButton.place(x=0,y=0)
-        hideButton=Button(self,text="Hide the system file",width=buttonW,command=self.hideInfo)
-        hideButton.place(x=0,y=buttonH*3)
-        #self.focus()
-        print "-->>The GUI app start!"
+def centerWindow(self):
+	w = 300
+	h = 160
+	sw = self.winfo_screenwidth()
+	sh = self.winfo_screenheight()
+	x = (sw - w) / 2
+	y = (sh - h) / 2
+	self.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
+def iniFrame():
+	root=Tk()
+	root.title('Show/Hide the system file of Mac OS')
+	centerWindow(root)
+	Label(text='This is the tool to show/hide\n your mac os system file.\n develoment by Lane128',width=200,height=4,bg='#D3D3D3').pack(fill=BOTH)
+	Button(text='Show the system file',bg='#D3D3D3',command=showOpt).pack(fill=BOTH)
+	Button(text='Hide the system file',bg='#D3D3D3',command=hideOpt).pack(fill=BOTH)
+	Button(text='Quit',bg='#D3D3D3',command=quitOpt).pack(fill=BOTH)
+	root.resizable(False,False)
+	root.mainloop()
 
-    def showInfo(self):
-        os.system('defaults write com.apple.finder AppleShowAllFiles -bool true')
-        os.system('killall Finder')
-        print "-->>The system file are shown."
-
-    def hideInfo(self):
-        os.system('defaults write com.apple.finder AppleShowAllFiles -bool false')
-        os.system('killall Finder')
-        print "-->>The system file are hided."
-
-
-def main():
-    root = Tk()
-    app = Example(root)
-    root.mainloop()
-
-if __name__ == '__main__':
-    main()
+if __name__=='__main__':
+	iniFrame()
